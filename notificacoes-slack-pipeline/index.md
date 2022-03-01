@@ -87,6 +87,5 @@ Foi necessário criar dois templates, um de sucesso e um de falha, pelo fato de 
 Nessa etapa havia um problema, não seria correto deixar informações sensíveis, como <b>WebHook</b>, imagens de feedback (continha imagens de membros da equipe) e demais informações que além de sensiveis, ainda impediam o template de se tornar genérico.
 Então a solução foi passar parametros para esse arquivos <b>.sh</b> e fazer ele montar a mensagem através desses parametros fornecidos.
 
-
 ## Pipeline:
 
