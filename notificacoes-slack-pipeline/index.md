@@ -56,5 +56,37 @@ Nesse momento, as duas dúvidas iniciais foram respondidas:
 ### Arquivo SH
 Ao avaliar o código gerado pelo Block Kit Builder, percebemos que ele se torna extenso e inviável de manter o código bruto dentro de qualquer pipeline. Foi considerado então, desacoplar o código e inseri-ló dentro dos arquivos de ci do projeto, fazendo referência ao arquivo nas pipelines, mas não escrevendo diretamente toda a estrutura.
 
+Assim ficou a estrutura:
+
+![Folder Slack Script](https://user-images.githubusercontent.com/53791328/156242033-58d247e4-78c9-4483-8565-f4c29b159a03.png)
+
+Foi necessário criar dois templates, um de sucesso e um de falha, pelo fato de que as informações necessárias em ambos mudam conforme o resultado da execução da pipeline.
+
+<b>Estrutura de Notificação de Sucesso:</b>
+
+>>> Além de contar com um diversas informações, ainda há um titulo e uma imagem de feedback
+
+|Informações|Atalhos|
+|---|---|
+|Marca|Link para a Release|
+|Versão|Link para o App Center|
+|Ambiente||
+|Origem||
+
+<b>Estrutura de Notificação de Falha:</b>
+
+>>> Além de contar com um diversas informações, ainda há um titulo e uma imagem de feedback
+
+|Informações|Atalhos|
+|---|---|
+|Marca|Mais Informações|
+|Versão||
+|Ambiente||
+|Origem||
+
+Nessa etapa havia um problema, não seria correto deixar informações sensíveis, como <b>WebHook</b>, imagens de feedback (continha imagens de membros da equipe) e demais informações que além de sensiveis, ainda impediam o template de se tornar genérico.
+Então a solução foi passar parametros para esse arquivos <b>.sh</b> e fazer ele montar a mensagem através desses parametros fornecidos.
+
+
 ## Pipeline:
 
