@@ -35,7 +35,7 @@ Além disso, tive que habilitar a utilização de WebHooks, logo na sequência:
 Após habilitar, é possível criar um novo WebHook, escolhendo o canal que será enviado a mensagem, dentro do workspace anteriormente escolhido.
 Agora o código citado anteriormente, teve o trecho YOUR_WEBHOOK_URL automaticamente substituido pela verdadeira URL do WebHook.
 
-![Habilitar WebHook](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/url%20do%20webhook.png?raw=true)
+![WebHook URL](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/url%20do%20webhook.png?raw=true)
 
 Nessa etapa, uma das minhas perguntas iniciais já foi respondida:
 - [X] Como criar um WebHook?
@@ -44,6 +44,8 @@ Nessa etapa, uma das minhas perguntas iniciais já foi respondida:
 ### Data
 Ao ler a [documentação](https://api.slack.com/messaging/interactivity#getting_started) sobre mensagens, descobri que o <b>data</b> aceita objetos muito mais complexos.
 Além disso, uma ferramenta que me auxiliou muito foi a [Block Kit Builder](), onde é possível montar a mensagem de maneira modular, acrescentando botões, imagens, divisores e muito mais, de maneira interativa e simplificada.
+
+![Block Kit Builder](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/block%20kit%20builder.png?raw=true)
 
 Nesse momento, as duas dúvidas iniciais foram respondidas:
 - [X] Como criar um WebHook?
