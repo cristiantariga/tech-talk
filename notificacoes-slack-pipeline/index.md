@@ -35,5 +35,6 @@ Além disso, tive que habilitar a utilização de WebHooks, logo na sequência:
 Após habilitar, é possível criar um novo WebHook, escolhendo o canal que será enviado a mensagem, dentro do workspace anteriormente escolhido.
 Agora o código citado anteriormente, teve o trecho YOUR_WEBHOOK_URL automaticamente substituido pela verdadeira URL do WebHook.
 
+![Habilitar WebHook](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/url%20do%20webhook.png?raw=true)
 
 
