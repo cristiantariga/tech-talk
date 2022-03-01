@@ -43,4 +43,8 @@ Nessa etapa, uma das minhas perguntas iniciais já foi respondida:
 
 ### Data
 Ao ler a [documentação](https://api.slack.com/messaging/interactivity#getting_started) sobre mensagens, descobri que o <b>data</b> aceita objetos muito mais complexos.
-Além disso, uma ferramenta que me auxiliou muito foi a [Block Kit Builder](https://app.slack.com/block-kit-builder), onde é possível montar a mensagem de maneira mudular, acrescentando botões, imagens, divisores e muito mais.
+Além disso, uma ferramenta que me auxiliou muito foi a [Block Kit Builder](), onde é possível montar a mensagem de maneira modular, acrescentando botões, imagens, divisores e muito mais, de maneira interativa e simplificada.
+
+Nesse momento, as duas dúvidas iniciais foram respondidas:
+- [X] Como criar um WebHook?
+- [X] O atributo data aceita somente texto?
