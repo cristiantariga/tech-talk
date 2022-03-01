@@ -52,3 +52,9 @@ Além disso, uma ferramenta que me auxiliou muito foi a [Block Kit Builder](), o
 Nesse momento, as duas dúvidas iniciais foram respondidas:
 - [X] Como criar um WebHook?
 - [X] O atributo data aceita somente texto?
+
+### Arquivo SH
+Ao avaliar o código gerado pelo Block Kit Builder, percebemos que ele se torna extenso e inviável de manter o código bruto dentro de qualquer pipeline. Foi considerado então, desacoplar o código e inseri-ló dentro dos arquivos de ci do projeto, fazendo referência ao arquivo nas pipelines, mas não escrevendo diretamente toda a estrutura.
+
+## Pipeline:
+
