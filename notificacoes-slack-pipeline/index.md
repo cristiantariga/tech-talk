@@ -9,6 +9,8 @@ Usavamos as notificações integradas ao Slack, onde era possível ser notificad
 * Atalho para o App Center
 * Atalho para a Release no GitHub
 
+![Relato Chatper](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/relato%20chapter.png?raw=true)
+
 ## Notificação:
 
 Ao invés de usarmos a integração padrão anexada ao Slack, partimos para as funcionalidades disponiveis da [API do Slack](https://api.slack.com/web).
