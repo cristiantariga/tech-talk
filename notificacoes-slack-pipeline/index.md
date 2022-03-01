@@ -37,4 +37,10 @@ Agora o código citado anteriormente, teve o trecho YOUR_WEBHOOK_URL automaticam
 
 ![Habilitar WebHook](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/url%20do%20webhook.png?raw=true)
 
+Nessa etapa, uma das minhas perguntas iniciais já foi respondida:
+- [X] Como criar um WebHook?
+- [ ] O atributo data aceita somente texto?
 
+### Data
+Ao ler a [documentação](https://api.slack.com/messaging/interactivity#getting_started) sobre mensagens, descobri que o <b>data</b> aceita objetos muito mais complexos.
+Além disso, uma ferramenta que me auxiliou muito foi a [Block Kit Builder](https://app.slack.com/block-kit-builder), onde é possível montar a mensagem de maneira mudular, acrescentando botões, imagens, divisores e muito mais.
