@@ -24,4 +24,16 @@ Nesta etapa, havia duas dúvidas principais:
 
 Webhook é uma forma de recebimento de informações, que são passadas quando um evento acontece. Dessa forma, o webhook na prática, é a forma de receber informações entre dois sistemas de uma forma passiva. É uma maneira prática para um app ou sistema fornecer outras aplicações com informações em tempo real.
 
-Para ter acesso ao WebHook no Slack, tive que criar um [App](https://api.slack.com/apps?new_app=1)  
+Para ter acesso ao WebHook no Slack, tive que criar um novo [App](https://api.slack.com/apps?new_app=1), escolhendo um nome e workspace no qual deseja que o app tenha permissão para utilizar. Lembrando que o nome escolhido aparecerá como nome do remetente da notificação (exemplo: Narutão)
+
+![Criar novo App](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/criar%20app.png?raw=true)
+
+Além disso, tive que habilitar a utilização de WebHooks, logo na sequência:
+
+![Habilitar WebHook](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/ativar%20webhook.png?raw=true)
+
+Após habilitar, é possível criar um novo WebHook, escolhendo o canal que será enviado a mensagem, dentro do workspace anteriormente escolhido.
+Agora o código citado anteriormente, teve o trecho YOUR_WEBHOOK_URL automaticamente substituido pela verdadeira URL do WebHook.
+
+
+
