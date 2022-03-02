@@ -132,4 +132,4 @@ Depois de definir o output, conseguimos obter o valor setado nesse job, dentro d
 
 ```$[ dependencies.GetCurrentVersionName.outputs['getVersion.currentVersionName'] ]```
 
-No caso, apontamos como dependecia o <b>GetCurrentVersionName</b> que é o job de origem desse valor, e pegamos o valor do output escolhido, no caso o <b>currentVersionName</b>
+No caso, apontamos como dependecia o <b>GetCurrentVersionName</b> que é o job de origem desse valor e pegamos o valor do output escolhido, no caso o <b>currentVersionName</b>
