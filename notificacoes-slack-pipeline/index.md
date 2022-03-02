@@ -103,3 +103,12 @@ Então em resumo, guardamos as informações sensíveis ou que podem váriar de 
 
 ## Pipeline:
 
+No contexto das pipelines, tinha duas questões para resolver:
+* Como detectar sucesso ou falha?
+* Como lidar com escopo nas pipelines
+
+<b>Como detectar sucesso ou falha:</b>
+
+Podemos usar as condições especificadas na documentação da [Azure](https://docs.microsoft.com/pt-br/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml).
+
+Onde informamos a condição (no nosso caso, sucesso ou falha) e todos os jobs que precisam atender essa condição, para só assim executarmos o job dependente, que seria o job da notificação.
