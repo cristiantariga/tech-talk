@@ -88,7 +88,7 @@ Então a solução foi passar parametros para esse arquivos <b>.sh</b> e fazer e
 
 >>> Pode acessar o arquivo [aqui](https://github.com/ArezzoCo/arezzoco-white-label-app/blob/develop/scripts/slack/job-success.sh)
 
-![image](https://user-images.githubusercontent.com/53791328/156276322-4498e770-71a9-400b-8701-57993a6a5920.png)
+![Variable Group](https://user-images.githubusercontent.com/53791328/156276322-4498e770-71a9-400b-8701-57993a6a5920.png)
 
 Surgiu então outra dúvida: Onde vamos guardar estes dados considerados sensíveis?
 
@@ -110,5 +110,7 @@ No contexto das pipelines, tinha duas questões para resolver:
 <b>Como detectar sucesso ou falha:</b>
 
 Podemos usar as condições especificadas na documentação da [Azure](https://docs.microsoft.com/pt-br/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml).
+
+[Condicao e Dependencia](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/condicao%20e%20dependencia.png?raw=true)
 
 Onde informamos a condição (no nosso caso, sucesso ou falha) e todos os jobs que precisam atender essa condição, para só assim executarmos o job dependente, que seria o job da notificação.
