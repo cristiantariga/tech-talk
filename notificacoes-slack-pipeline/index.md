@@ -111,6 +111,12 @@ No contexto das pipelines, tinha duas questões para resolver:
 
 Podemos usar as condições especificadas na documentação da [Azure](https://docs.microsoft.com/pt-br/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml).
 
-[Condicao e Dependencia](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/condicao%20e%20dependencia.png?raw=true)
+![Condicao e Dependencia](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/condicao%20e%20dependencia.png?raw=true)
 
 Onde informamos a condição (no nosso caso, sucesso ou falha) e todos os jobs que precisam atender essa condição, para só assim executarmos o job dependente, que seria o job da notificação.
+
+Um ponto interessante que podemos observar, é que existindo dois jobs (um de sucesso e outro de falha), ele apenas executa o que obedecer a condição e dá um skip no job que não atendeu.
+
+![Skip Sucesso e Falha](https://user-images.githubusercontent.com/53791328/156281431-bfae3b25-ec16-4bc0-85e5-b46eabb6b697.png)
+
+
