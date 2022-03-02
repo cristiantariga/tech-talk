@@ -107,10 +107,29 @@ No contexto das pipelines, tinha duas questões para resolver:
 * Como detectar sucesso ou falha?
 * Como lidar com escopo nas pipelines
 
-<b>Como detectar sucesso ou falha:</b>
+### Como detectar sucesso ou falha
 
 Podemos usar as condições especificadas na documentação da [Azure](https://docs.microsoft.com/pt-br/azure/devops/pipelines/process/conditions?view=azure-devops&tabs=yaml).
 
-[Condicao e Dependencia](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/condicao%20e%20dependencia.png?raw=true)
+![Condicao e Dependencia](https://github.com/cristiantariga/tech-talk/blob/main/notificacoes-slack-pipeline/images/condicao%20e%20dependencia.png?raw=true)
 
 Onde informamos a condição (no nosso caso, sucesso ou falha) e todos os jobs que precisam atender essa condição, para só assim executarmos o job dependente, que seria o job da notificação.
+
+Um ponto interessante que podemos observar, é que existindo dois jobs (um de sucesso e outro de falha), ele apenas executa o que obedecer a condição e dá um skip no job que não atendeu.
+
+![Skip Sucesso e Falha](https://user-images.githubusercontent.com/53791328/156281431-bfae3b25-ec16-4bc0-85e5-b46eabb6b697.png)
+
+### Escopo nas pipelines
+Nos primeiros momentos da implementação da notificação nas pipelines, houve alguns problemas com escopo, onde valores extraidos/setados em um job, não eram acessiveis para outro.
+
+Era necessário utilizar [outputs](https://docs.microsoft.com/pt-br/azure/devops/pipelines/process/set-variables-scripts?view=azure-devops&tabs=bash) para conseguir ter acesso a determinados valores de variaveis.
+
+Foi definido ao setar a variavel no job <b>GetCurrentVersionName</b> o isoutput=true
+
+```[task.setvariable variable=currentVersionName;isoutput=true]```
+
+Depois de definir o output, conseguimos obter o valor setado nesse job, dentro do job de sucesso por exemplo:
+
+```$[ dependencies.GetCurrentVersionName.outputs['getVersion.currentVersionName'] ]```
+
+No caso, apontamos como dependecia o <b>GetCurrentVersionName</b> que é o job de origem desse valor e pegamos o valor do output escolhido, no caso o <b>currentVersionName</b>
