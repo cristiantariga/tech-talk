@@ -87,7 +87,20 @@ Foi necessário criar dois templates, um de sucesso e um de falha, pelo fato de 
 Nessa etapa havia um problema, não seria correto deixar informações sensíveis, como <b>WebHook</b>, imagens de feedback (continha imagens de membros da equipe) e demais informações que além de sensiveis, ainda impediam o template de se tornar genérico.
 Então a solução foi passar parametros para esse arquivos <b>.sh</b> e fazer ele montar a mensagem através desses parametros fornecidos.
 
-Surgiu então, outra dúvida: Onde vamos guardar estes dados sensíveis?
+>>> Pode acessar o arquivo [aqui](https://github.com/ArezzoCo/arezzoco-white-label-app/blob/develop/scripts/slack/job-success.sh)
+
+![image](https://user-images.githubusercontent.com/53791328/156276322-4498e770-71a9-400b-8701-57993a6a5920.png)
+
+Surgiu então outra dúvida: Onde vamos guardar estes dados considerados sensíveis?
+
+Conseguimos usar o <b>Variable Groups</b> dentro da própria plataforma da [Azure](https://dev.azure.com/arezzosa/MOBILIDADE/_library?itemType=VariableGroups&view=VariableGroupView&variableGroupId=1&path=arezzo-staging-variables)
+
+<b>Vantagens:</b>
+* Podemos alterar os parametros passados sem alterações no código, sem merge
+* Podemos ofuscar as informações sensíveis
+* Tornamos o template mais genérico
+
+Então em resumo, guardamos as informações sensíveis ou que podem váriar de app pra app dentro da plataforma da Azure e passamos via parâmetros para dentro do template que fica em um arquivo .sh dentro do projeto de cada App.
 
 ## Pipeline:
 
