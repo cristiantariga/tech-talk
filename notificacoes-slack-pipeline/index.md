@@ -1,7 +1,9 @@
 # Notificações no Slack via Pipeline
 
 ## Motivação:
-Usavamos as notificações integradas ao Slack, onde era possível ser notificado em caso de sucesso ou falha. Um dos problemas dessa solução, é a baixa quantidade de informações presentes nas notificações enviadas. Em uma reunião de chapter, elegemos as principais informações necessárias para visualizar em uma notificação.
+Usavamos as notificações integradas ao Slack, onde era possível ser notificado em caso de sucesso ou falha. Um dos problemas dessa solução, é a baixa quantidade de informações presentes nas notificações enviadas.
+
+Em uma reunião de chapter, elegemos as principais informações necessárias para visualizar em uma notificação.
 
 <b> Informações Necessárias: </b>
 
